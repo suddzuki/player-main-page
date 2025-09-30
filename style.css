@@ -1,7 +1,6 @@
 
 
 :root {
-    /* Цветовая палитра */
     --primary: #9f43d8;
     --secondary: #6b5ce7;
     --accent: #4cc9f0;
@@ -9,36 +8,30 @@
     --light: #ffffff;
     --gray-light: rgba(255, 255, 255, 0.2);
     --gray-medium: rgba(255, 255, 255, 0.483);
-    --gray-dark: rgba(255, 255, 255, 0.1);
-    
-    /* Градиенты */
+    --gray-dark: rgba(255, 255, 255, 0.1);  
     --bg-gradient: radial-gradient(circle, rgba(71, 20, 112, 0.952), var(--dark));
     --progress-gradient: linear-gradient(90deg, var(--primary), var(--secondary));
     --volume-gradient: linear-gradient(90deg, var(--primary), var(--secondary));
-    
-    /* Тени и свечения */
     --shadow-glow: 0 0 15px var(--primary);
     --shadow-glow-strong: 0 0 40px rgba(195, 0, 255, 0.3);
     --shadow-glow-white: 0 0 15px var(--light);
     --shadow-glow-dark: 0 0 12px rgb(67, 63, 63);
     --shadow-text: 0 0 15px rgba(255, 255, 255, 0.7);
-    
-    /* Размеры */
+
     --cover-size: 350px;
     --btn-size: 50px;
     --volume-btn-size: 30px;
     --progress-height: 6px;
     --volume-height: 4px;
     
-    /* Отступы */
+
     --padding-large: 40px;
     --padding-medium: 20px;
     --padding-small: 15px;
     --margin-large: 20px;
     --margin-medium: 15px;
     --margin-small: 10px;
-    
-    /* Радиусы */
+
     --radius-large: 30px;
     --radius-medium: 20px;
     --radius-small: 12px;
