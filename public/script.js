@@ -12,13 +12,31 @@ const player = {
     volumeBtn: null,
     volumeLevel: null,
     volumeTrack: null,
+    tracks : [],
+    currentTrackIndex: 0,
+
+
 
 
     currentTrack: {
         title: "BIG FAIL",
         author: "dmtboy",
-        src: "content/tracks/track1.mp3"
+        src: "content/music/sample.mp3"
     },
+
+
+    loadTrack: function(index){
+        this.currentTrackIndex = index;
+        this.audio.src = this.tracks[this.currentTrackIndex]
+
+        const parts = this.tracks[index].split('/');
+        this.titleEl.textContent = parts[parts.length -1].replace('mp3', '');
+        this.authorEl.textContent = "Uknown author";
+
+        this.displayTrackInfo();
+        this.play();
+    },
+
 
     play: function () {
         this.audio.play();
@@ -56,10 +74,13 @@ const player = {
     displayTrackInfo: function () {
         this.audio.addEventListener('loadedmetadata', () => {
             this.TotalTime();
+            this.this.updateVolIcon();
+
         });
         this.audio.addEventListener('timeupdate', () => {
             if (this.audio.duration > 0) {
                 this.updateProgress();
+
             }
         })
     },
@@ -162,6 +183,7 @@ const player = {
         this.authorEl.textContent = this.currentTrack.author;
 
         this.displayTrackInfo();
+        this.updateVolIcon();
 
         this.playBtn.parentElement.addEventListener('click', () => {
             this.togglePlay();
@@ -186,5 +208,12 @@ const player = {
         })
     }
 }
+
+document.addEventListener('DOMContentLoaded', function(){
+    player.init();
+});
+
+
+
 
 
