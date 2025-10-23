@@ -1,7 +1,15 @@
-  .vscode/*
-  !/.vscode/settings.json
-  !/.vscode/tasks.json
-  !/.vscode/launch.json
-   !/.vscode/extensions.json
-  *mp3
-  *jpg
+# IDE settings
+.vscode/*
+!/.vscode/settings.json
+!/.vscode/tasks.json
+!/.vscode/launch.json
+!/.vscode/extensions.json
+
+# Media files
+*.mp3
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.webm

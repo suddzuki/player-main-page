@@ -9,105 +9,127 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 
-
-
   <title>sdz.player</title>
 </head>
 
 <body>
-  <div class="player-content">
-    <div class="player-head">
-      <nav class="nav-panel">
-        <ul class="nav-ul">
-          <li><a href=""><i class="fa fa-cogs" aria-hidden="true"></i></a></li>
-          <li><a href=""><i class="fa fa-tablet" aria-hidden="true"></i></a></li>
-          <li><a href=""><i class="fa fa-music" aria-hidden="true"></i></a></li>
-        </ul>
-      </nav>
-      <!-- <hr> -->
+  <div class="app-container">
+    <div class="bg-video">
+      <video autoplay loop muted class="video" src="content/background-video/0_Pixel_Art_Night_1920x1080.mp4"></video>
     </div>
 
-    <div class="player-track">
-      <div class="track-list">
-        <div class="next-btn">
-          <i class="fas fa-angle-left"></i>
-        </div>
+    <header class="top-bar">
+    <h1>sdz.player</h1>
+    </header>
 
-        <div class="cover">
-          <img src="content/album/sample.jpg" alt="обложка :)" />
-        </div>
-
-        <div class="next-btn">
-          <i class="fas fa-angle-right"></i>
-        </div>
+    <div class="player-content">
+      <div class="player-head">
+        <nav class="nav-panel">
+          <ul class="nav-ul">
+            <li><a href="#" class="settings"><i class="fa fa-cogs" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="player active"><i class="fa fa-tablet" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="playlist"><i class="fa fa-music" aria-hidden="true"></i></a></li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="player-bar">
-        <h2>now playing:</h2>
-        <span class="title">track-name</span><br />
-        <span class="author">track-author</span>
-        <div class="progress-container">
-          <div class="progress-bar">
-            <div class="progress-fill"></div>
+      <div class="tabs">
+
+        <div id="settings" class="tab-pane">
+          <div class="settings-head">
+            <h2>Настройки</h2>
           </div>
-          <div class="time-display">
-            <span class="current-time">0:00</span>
-            <span class="total-time"></span>
+          <div class="settings-main">
+            <span> скоро будут :3 </span>
           </div>
         </div>
-      </div>
-      <div class="player-interact">
-        <div class="player-buttons">
-          <div class="volume-control">
-            <button class="volume-btn">
-              <i class="fas fa-volume-high"></i>
-            </button>
-            <div class="volume-slider">
-              <div class="volume-track">
-                <div class="volume-level"></div>
+
+        <div id="player" class="tab-pane active">
+          <div class="player-track">
+            <div class="track-list">
+              <div class="cover">
+                <img src="content/album/sample.jpg" alt="обложка :)" />
+              </div>
+            </div>
+
+            <div class="player-bar">
+              <h2>now playing:</h2>
+              <span class="title">track-name</span><br />
+              <span class="author">track-author</span>
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="time-display">
+                  <span class="current-time">0:00</span>
+                  <span class="total-time"></span>
+                </div>
+              </div>
+            </div>
+            <div class="player-interact">
+              <div class="player-buttons">
+                <div class="volume-control">
+                  <button class="volume-btn">
+                    <i class="fas fa-volume-high"></i>
+                  </button>
+                  <div class="volume-slider">
+                    <div class="volume-track">
+                      <div class="volume-level"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="player-controls">
+                  <button class="control-btn">
+                    <i class="fas fa-random"></i>
+                  </button>
+                  <button class="control-btn prev-track-btn">
+                    <i class="fas fa-step-backward"></i>
+                  </button>
+                  <button class="control-btn play-btn">
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <button class="control-btn next-track-btn">
+                    <i class="fas fa-step-forward"></i>
+                  </button>
+                  <button class="control-btn redo-btn">
+                    <i class="fas fa-redo"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="player-controls">
-            <button class="control-btn">
-              <i class="fas fa-random"></i>
-            </button>
-            <button class="control-btn">
-              <i class="fas fa-step-backward"></i>
-            </button>
+        </div>
 
-            <button class="control-btn play-btn">
-              <i class="fas fa-play"></i>
-            </button>
-            <button class="control-btn">
-              <i class="fas fa-step-forward"></i>
-            </button>
-            <button class="control-btn redo-btn">
-              <i class="fas fa-redo"></i>
-            </button>
+        <div id="playlist" class="tab-pane">
+          <div class="playlist-head">
+            <h2>Плейлист</h2>
           </div>
-
+          <div class="playlist-main">
+            <span> скоро будет :3 </span>
+          </div>
         </div>
 
       </div>
 
+      
     </div>
-    <div class="player-foot">
-      <!-- <hr> -->
-      <h1>sdz.player</h1>
-      <p>all links:</p>
-      <ul class="links-container">
-        <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-spotify"></i></a></li>
-      </ul>
-    </div>
+
+    <footer class="bottom-bar">
+      <div class="player-foot">
+        <!-- <h1>sdz.player</h1> -->
+        <h2>all links:</h2>
+        <ul class="links-container">
+          <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-spotify"></i></a></li>
+        </ul>
+      </div>
+    </footer>
   </div>
 
   <audio id="audio-player"></audio>
-
   <script src="script.js"></script>
 </body>
 
